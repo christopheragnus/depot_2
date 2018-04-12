@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
           I18n.locale = params[:locale]
         else
           flash.now[:notice] =
-          "#{params[:locale]} translation not available"
+            "#{params[:locale]} translation not available"
           logger.error flash.now[:notice]
         end
       end
