@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # Agile_Web_Development_with_Rails_5
+# depot_2

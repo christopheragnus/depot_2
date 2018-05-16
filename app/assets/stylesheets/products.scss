@@ -1,54 +1,60 @@
-// Place all the styles related to the Products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ ​    // Place all the styles related to the Products controller here.​
+​ 	​// They will automatically be included in application.css.​
+​ 	​// You can use Sass (SCSS) here: http://sass-lang.com/​
 
 .products {
-    table {
-        border-collapse:collapse;
+   margin: 0;
+   padding: 0.5em;
+   a {
+     padding: 0.354em 0.5em;
+     border-radius: 0.345em;
+   }
+   table {
+     border-collapse: collapse;
+   }
+   td {
+     padding: 0.5em;
+     margin: 0;
+   }
 
-    }
+   tr.list_line_odd {
+     background-color: #effeef;
+   }
 
-    table tr td {
-        padding:5px;
-        vertical-align:top;
-    }
-    
-    .list_image {
-        width:60px;
-        height:70px;
-    }
+   td.image {
+     // Hide this on mobile devices
+     display: none;
 
-    .list_description {
-        width: 60%;
+     // Assume anything bigger than 30em is non-mobile and can fit image
 
-        dl {
-            margin: 0;
-        }
+     @media (min-width: 30em) {
+       display:block;
+       img {
+         height: 11.3em;
+       }
+     }
+   }
 
-        dt {
-            color: #224;
-            font-weight: bold;
-            font-size: larger;
-        }
+   td.description {
+     h1 {
+       font-size: 1.4em;
+     }
+   }
 
-        dd {
-            margin:0;
-        }
-    }
+   td.actions {
+     ul {
+       padding: 0;
+       list-style: none;
+       li {
+         padding: 0.5em 0.5em;
+       }
+     }
+   }
 
-    .list_actions {
-        font-size: x-small;
-        text-align: right;
-        padding-left:1em;
+   tfoot {
+     td {
+       padding: 0.5em 0;
 
-    }
-
-    .list_line_even {
-        background: #e0f8f8;
-    }
-
-    .list_line_odd {
-        background: #f8b0f8;
-    }
-}
-
+     }
+   }
+ }
